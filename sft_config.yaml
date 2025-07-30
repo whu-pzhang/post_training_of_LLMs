@@ -1,0 +1,18 @@
+# sft_config.yaml
+model_name_or_path: "Qwen/Qwen3-0.6B-Base"
+dataset_name: "trl-lib/Capybara"
+learning_rate: 8e-5
+num_train_epochs: 1
+per_device_train_batch_size: 2
+gradient_accumulation_steps: 8
+eval_strategy: "steps"
+eval_steps: 100
+output_dir: "./output/Qwen3-0.6B-Capybara"
+packing: true
+eos_token: "<|im_end|>"
+report_to: ["tensorboard"]
+logging_steps: 10
+bf16: true
+attn_implementation: "flash_attention_2"
+
+
